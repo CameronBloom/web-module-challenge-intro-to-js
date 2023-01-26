@@ -316,9 +316,21 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  let strLowerCase = string.toLowerCase();
+  let arrLetters = strLowerCase.split("")
+  let vowels = [];
+  arrLetters.forEach(letter => {
+    if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u") {
+      vowels.push(letter);
+    }
+  })
+  console.log(`There are ${vowels.length} vowels in ${string}.`);
+  return vowels.length;
 }
+
+vowelCounter('Ohio');
+vowelCounter('Mississippi');
 
 
 
