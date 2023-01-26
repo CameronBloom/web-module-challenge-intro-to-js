@@ -19,7 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18;
+if (votingAge === 18) {
+  console.log(`true`);
+}
 
 
 /*
@@ -33,8 +36,13 @@ Do the following:
 
    HINT: no function required
 */
+let firstPet = "Einstein";
+let secondPet = 'Chance';
 
-
+if (firstPet === secondPet) {
+  firstPet = "Chenelle"
+}
+console.log(firstPet);
 
 
 
@@ -48,7 +56,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let year = "1999";
+year = Number(year);
+console.log(year);
 
 
 
@@ -64,6 +74,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
+multiply(10, 10);
 
 
 
@@ -77,10 +88,12 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  let dogYears = age * 7;
+  return dogYears;
 }
 
+dogYears(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,11 +142,34 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  let foodReqs = null;
+  if (age < 1) {
+    if (age >= (2 / 12).toFixed(2) && age < (4 / 12).toFixed(2)) {
+      foodReqs = weight * 0.1;
+    } else if (age >= (4 / 12).toFixed(2) && age < (7 / 12).toFixed(2)) {
+      foodReqs = weight * 0.05;
+    } else if (age >= (7 / 12).toFixed(2) && age < 1) {
+      foodReqs = weight * 0.04;
+    } else {
+      console.log(`This puppy is too young to estimate food requirements.`);
+    }
+  } else {
+    if (weight <= 5) {
+      foodReqs = weight * 0.05;
+    } else if (weight > 5 && weight <= 10) {
+      foodReqs = weight * 0.04;
+    } else if (weight > 10 && weight <= 15) {
+      foodReqs = weight * 0.03;
+    } else if (weight > 15) {
+      foodReqs = weight * 0.02;
+    }
+  }
+  return foodReqs;
 }
 
 
+console.log(hungryDog(15, 1));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
