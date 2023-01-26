@@ -227,10 +227,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return (kilometers * 0.621371);
 }
 
+miles(100);
 
 
 //Task 5b - Centimeters to Feet
@@ -241,8 +242,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(centimeters){
+  return (centimeters / 30.48);
 }
 
 
@@ -261,10 +262,13 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(verses){
+  return `${verses} bottles of soda on the wall, ${verses} bottles of soda, take one down pass it around ${verses - 1} bottles of soda on the wall`;
 }
-
+annoyingSong(2);
+for (let index = 10; index > 0; index--) {
+  annoyingSong(index);
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
